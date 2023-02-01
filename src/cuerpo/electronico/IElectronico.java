@@ -1,4 +1,4 @@
-package cuerpo;
+package cuerpo.electronico;
 
 public interface IElectronico {
     String getFabricante();

@@ -1,14 +1,18 @@
-package cuerpo;
+package cuerpo.libros;
+
+import cuerpo.IProducto;
+import cuerpo.Producto;
 
 import java.util.Date;
 
-public class Libro extends Producto implements  IProducto,ILibro {
-    private  Date fechaPublicacion;
+public class Libro extends Producto implements ILibro {
+    private Date fechaPublicacion;
     private String autor;
-    private  String titulo;
-    private  String editorial;
+    private String titulo;
+    private String editorial;
 
-    public Libro(int precio, Date fechaPublicacion, String autor, String titulo, String editorial) {
+    public Libro(int precio, Date fechaPublicacion,
+                 String autor, String titulo, String editorial) {
         super(precio);
         this.fechaPublicacion = fechaPublicacion;
         this.autor = autor;
@@ -38,6 +42,6 @@ public class Libro extends Producto implements  IProducto,ILibro {
 
     @Override
     public double getPrecioVenta() {
-        return 0;
+        return (super.getPrecio() * 1.25);
     }
 }
