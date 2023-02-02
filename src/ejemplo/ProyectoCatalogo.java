@@ -18,49 +18,8 @@ public class ProyectoCatalogo {
         productos.add(new Comic(1, new Date(1990 - 2 - 15), "Marvel dc", "Los invencibles", "Qsyo", "El elastico"));
 
         for (IProducto producto : productos) {
-
-            System.out.print("Tipo de: " + producto.getClass().getName());
-            System.out.print(" - ");
-            System.out.print("Precio: " + producto.getPrecio());
-            System.out.print(" - ");
-            System.out.print("Precio final: " + producto.getPrecioVenta());
-
-            // Para los Electronicos  ============
-            if (producto instanceof IElectronico) {
-                System.out.print(" - ");
-                System.out.print("Fabricante: " + ((IElectronico) producto).getFabricante());
-
-                // Para los IPhone ============
-                if (producto instanceof Iphone) {
-                    System.out.print(" - ");
-                    System.out.print("Modelo: " + ((Iphone) producto).getModelo());
-                    System.out.print(" - ");
-                    System.out.print("Color: " + ((Iphone) producto).getColor());
-                }
-
-                // Para los LCD  ============
-                if (producto instanceof TvLcd) {
-                    System.out.print(" - ");
-                    System.out.print("Pulgadas: " + ((TvLcd) producto).getPulgada());
-                }
-            }
-
-            // Para los Libros  ============
-            if (producto instanceof ILibro) {
-                System.out.print(" - ");
-                System.out.print("Titulo: " + ((ILibro) producto).getTitulo());
-                System.out.print(" - ");
-                System.out.print("Autor: " + ((ILibro) producto).getAutor());
-
-                // Para los Comics  ============
-                if (producto instanceof Comic) {
-                    System.out.print(" - ");
-                    System.out.print("Personaje: " + ((Comic) producto).getPersonaje());
-                }
-
-            }
-
-            System.out.println();
+            System.out.println(producto);
+            System.out.println("=====NEXT=====");
         }
     }
 }

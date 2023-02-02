@@ -18,5 +18,12 @@ public class TvLcd extends Electronico {
         return getPrecio() * 1.5;
     }
 
-
+    @Override
+    public String toString() {
+        int posicion = this.getClass().getCanonicalName().lastIndexOf(".") + 1;
+        String descripcion =  "Producto: "+getClass().getCanonicalName().substring(posicion)+'\n'+
+                "Pulgada: "+pulgada + '\n' +
+                super.toString();
+        return  descripcion;
+    }
 }

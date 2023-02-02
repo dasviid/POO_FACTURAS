@@ -22,4 +22,9 @@ abstract public class Producto implements IProducto {
     public int getPrecio() {
         return this.precio;
     }
+
+    @Override
+    public String toString() {
+        return "Precio: " + precio + "\n" ;
+    }
 }

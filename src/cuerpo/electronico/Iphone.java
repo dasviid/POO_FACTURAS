@@ -26,4 +26,15 @@ public class Iphone extends Electronico {
     public String getModelo() {
         return modelo;
     }
+
+    @Override
+    public String toString() {
+        int posicion = this.getClass().getCanonicalName().lastIndexOf(".") + 1;
+        String descripcion =  "Producto: "+getClass().getCanonicalName().substring(posicion)+'\n'+
+                 "Modelo: "+modelo + '\n' +
+                super.toString()
+                + "Color: " + color;
+
+        return descripcion;
+    }
 }
